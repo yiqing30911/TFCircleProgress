@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'TFCircleProgress_Example' do
+  pod 'TFCircleProgress', :path => '../'
+
+  target 'TFCircleProgress_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase' , '~> 2.1.4'
+  end
+end
