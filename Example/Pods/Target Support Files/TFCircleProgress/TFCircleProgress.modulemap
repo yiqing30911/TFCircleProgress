@@ -1,0 +1,6 @@
+framework module TFCircleProgress {
+  umbrella header "TFCircleProgress-umbrella.h"
+
+  export *
+  module * { export * }
+}
