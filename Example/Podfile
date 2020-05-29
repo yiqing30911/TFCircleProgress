@@ -3,7 +3,7 @@ use_frameworks!
 target 'TFCircleProgress_Example' do
   pod 'TFCircleProgress', :path => '../'
   pod 'SnapKit'
-
+  
   target 'TFCircleProgress_Tests' do
     inherit! :search_paths
 

@@ -41,7 +41,7 @@ public class CircleProgressView: UIView {
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.strokeColor = trackColor.cgColor
         trackLayer.lineWidth = lineWidth
-        trackLayer.lineCap = kCALineCapRound
+        trackLayer.lineCap = CAShapeLayerLineCap.round
         trackLayer.path = trackPath.cgPath
         layer.addSublayer(trackLayer)
     }
@@ -53,7 +53,7 @@ public class CircleProgressView: UIView {
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.lineWidth = lineWidth
-        progressLayer.lineCap = kCALineCapRound
+        progressLayer.lineCap = CAShapeLayerLineCap.round
         progressLayer.path = progressPath.cgPath
         progressLayer.strokeStart = 0
         progressLayer.strokeEnd = CGFloat(progress)
@@ -70,7 +70,7 @@ public class CircleProgressView: UIView {
         // 进度条动画
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        animation.timingFunction = CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
         animation.fromValue = 0
         animation.toValue = CGFloat(progress)
         progressLayer.add(animation, forKey: "strokeEndAnimation")
